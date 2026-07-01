@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Random jokes </title>
+<style>
+body{
+    background-color: lightskyblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button{
+    margin-top:10px;
+    padding: 10px 15px;
+    border-radius: 7px;
+    border: none;
+    background-color: greenyellow;
+   
+}
+#imagebox{
+    width:300px;
+    height:300px;
+    background-color:white;
+    border-radius:5px;
+    border:5px solid green;
+}
+img{
+    object-fit:cover;
+    width:100%;
+    height:100%;
+}
+    </style>
+</head>
+<body>
+<center>
+<h1> Story Telling Intern Activity </h1>
+<div id="imagebox" ><img src="https://c.pxhere.com/photos/c2/cd/rocks_river_landscape_wilderness_scenery_natural_wild_outdoor-1125519.jpg!d" alt="" id="story"></div>
+<button onclick="imageClicker()"> Display Image </button>
+</center>
+<script>
+const images = [
+    "https://tse4.mm.bing.net/th/id/OIP.eX7ub_jsLhAwTGB8acJi7QHaE8?rs=1&pid=ImgDetMain&o=7&rm=3", "https://c.pxhere.com/photos/c2/cd/rocks_river_landscape_wilderness_scenery_natural_wild_outdoor-1125519.jpg!d",
+    "https://www.travelandleisure.com/thmb/eYwyR56-ntSZf1ojMdxmZx4fefU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/yellowstone-national-park-madison-campground-YWSTNNPCAMP0322-1df400b70c164f9aacd3a70d5e1dd31e.jpg", "https://th.bing.com/th/id/OIP.-dukpq3q-maYsoNZO1Gm1QHaEO?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3",
+    "https://tse1.mm.bing.net/th/id/OIP._KoiZF-CCasHYrI-QssDBQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3", "https://tse4.mm.bing.net/th/id/OIP.xWkcy8lc_opROFI_eDcWLAHaEo?rs=1&pid=ImgDetMain&o=7&rm=3",
+];
+function imageClicker(){
+let randomindex = Math.floor(Math.random()*images.length);
+document.getElementById("story").src = images[randomindex];
+}
+
+    </script>
+    </body>
+    </html>
